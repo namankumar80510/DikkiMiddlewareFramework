@@ -18,8 +18,15 @@ class ApiAuthMiddleware implements MiddlewareInterface
         
         // Check if request is from same application
         $referer = $request->getHeaderLine('referer');
-        if (!empty($referer) && parse_url($referer, PHP_URL_HOST) === $request->getUri()->getHost()) {
-            return $handler->handle($request);
+        if (!empty($referer)) {
+            try {
+                $refererHost = parse_url($referer, PHP_URL_HOST);
+                if ($refererHost === $request->getUri()->getHost()) {
+                    return $handler->handle($request);
+                }
+            } catch (\Exception $e) {
+                // Invalid referer URL, continue with API key validation
+            }
         }
         
         // Check if path is whitelisted
