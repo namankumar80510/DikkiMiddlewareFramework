@@ -26,6 +26,7 @@
         ]
     },
     "require": {
+        "php": "^8.3",
         "aura/session": "^4.0",
         "dibi/dibi": "^5.0",
         "dikki/config": "^2.0",
