@@ -6,9 +6,7 @@ storage/tmp/logs/*
 storage/tmp/cache/*
 !storage/tmp/cache/.gitkeep
 storage/database/*
-!storage/database/.gitkeep
-storage/repositories/*
-!storage/repositories/.gitkeep
+!storage/database/README.md
 node_modules/
 config/api_keys.php
 composer.lock

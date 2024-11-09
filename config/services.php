@@ -1,9 +1,11 @@
 <?php
 
 use Api\Handlers\WelcomeHandler as ApiWelcomeHandler;
-use Auth\Libraries\SessionManager;
+use Auth\Handlers\LoginHandler;
+use Auth\Handlers\LogoutHandler;
 use Core\Libraries\ApiResponse;
 use Core\Libraries\DatabaseManager;
+use Core\Libraries\SessionManager;
 use Core\Libraries\ViewRenderer;
 use GuzzleHttp\Client;
 use Home\Handlers\HomeHandler;
@@ -19,18 +21,18 @@ return [
         ],
 
         # home handlers
-        'home_welcome_handler' => [
+        'home_handler' => [
             'class' => HomeHandler::class,
             'arguments' => ['@view_renderer']
         ],
 
         # auth handlers
         'auth_login_handler' => [
-            'class' => \Auth\Handlers\LoginHandler::class,
+            'class' => LoginHandler::class,
             'arguments' => ['@view_renderer', '@session_manager']
         ],
         'auth_logout_handler' => [
-            'class' => \Auth\Handlers\LogoutHandler::class,
+            'class' => LogoutHandler::class,
             'arguments' => ['@session_manager']
         ],
 

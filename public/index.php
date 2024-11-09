@@ -6,7 +6,7 @@ declare(strict_types=1);
  * A simple middleware framework for PHP, inspired by Mezzio.
  */
 
-use App\Bootstrap;
+use Core\Bootstrap;
 
 // require paths constants
 require_once __DIR__ . '/../paths_constants.php';

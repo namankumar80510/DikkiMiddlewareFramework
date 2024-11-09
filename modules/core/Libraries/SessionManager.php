@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Auth\Libraries;
+namespace Core\Libraries;
 
 use Aura\Session\SessionFactory;
 use Aura\Session\Session;

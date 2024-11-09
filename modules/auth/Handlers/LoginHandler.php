@@ -4,9 +4,8 @@ namespace Auth\Handlers;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
-
-use App\Libraries\ViewRenderer;
-use Auth\Libraries\SessionManager;
+use Core\Libraries\SessionManager;
+use Core\Libraries\ViewRenderer;
 use Laminas\Diactoros\Response\HtmlResponse;
 use Laminas\Diactoros\Response\RedirectResponse;
 

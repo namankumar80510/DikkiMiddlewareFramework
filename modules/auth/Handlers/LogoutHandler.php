@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Auth\Handlers;
 
-use Auth\Libraries\SessionManager;
+use Core\Libraries\SessionManager;
 use Laminas\Diactoros\Response\RedirectResponse;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;

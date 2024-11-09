@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Api\Handlers;
 
-use App\Libraries\ApiResponse;
+use Core\Libraries\ApiResponse;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 

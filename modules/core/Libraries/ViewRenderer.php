@@ -11,7 +11,7 @@ class ViewRenderer
         foreach (config('modules.autoload') as $module) {
             $viewsPath = MODULES_PATH . $module . '/Views';
             if (file_exists($viewsPath)) {
-                $this->engine->addFolder($module, $viewsPath);
+                $this->engine->addFolder(strtolower($module), $viewsPath);
             }
         }
     }

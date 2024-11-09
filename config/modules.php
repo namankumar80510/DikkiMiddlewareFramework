@@ -2,9 +2,9 @@
 
 return [
     'autoload' => [
-        'core', // must be loaded first
-        'auth',
-        'api',
-        'home',
+        'Core', // must be loaded first
+        'Auth',
+        'Api',
+        'Home',
     ]
 ];

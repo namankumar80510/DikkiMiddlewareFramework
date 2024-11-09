@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Core;
 
+use Core\Libraries\RoutingStrategy;
 use Dikki\DotEnv\DotEnv;
 use Laminas\Diactoros\ServerRequestFactory;
 use Laminas\HttpHandlerRunner\Emitter\SapiEmitter;
@@ -84,7 +85,7 @@ class Bootstrap
     public function getRouter(): Router
     {
         $router = $this->container->get('router');
-        $router->setStrategy(new \App\Libraries\RoutingStrategy);
+        $router->setStrategy(new RoutingStrategy);
 
         // Global middlewares
         $router->middlewares(config('app.middlewares'));
