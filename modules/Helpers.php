@@ -1,6 +1,6 @@
 <?php
 
-use Auth\Libraries\SessionManager;
+use Core\Libraries\SessionManager;
 use Dikki\Config\ConfigFetcher;
 
 /**
