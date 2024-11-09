@@ -2,10 +2,11 @@
 
 use Api\Handlers\WelcomeHandler as ApiWelcomeHandler;
 use Auth\Libraries\SessionManager;
-use App\Libraries\ApiResponse;
-use App\Libraries\DatabaseManager;
-use App\Libraries\ViewRenderer;
+use Core\Libraries\ApiResponse;
+use Core\Libraries\DatabaseManager;
+use Core\Libraries\ViewRenderer;
 use GuzzleHttp\Client;
+use Home\Handlers\HomeHandler;
 use League\Plates\Engine;
 
 return [
@@ -15,6 +16,12 @@ return [
         'api_welcome_handler' => [
             'class' => ApiWelcomeHandler::class,
             'arguments' => ['@api_response']
+        ],
+
+        # home handlers
+        'home_welcome_handler' => [
+            'class' => HomeHandler::class,
+            'arguments' => ['@view_renderer']
         ],
 
         # auth handlers

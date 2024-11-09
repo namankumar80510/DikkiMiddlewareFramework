@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Libraries;
+namespace Core\Libraries;
 
 use League\Route\Http\Exception\MethodNotAllowedException;
 use League\Route\Http\Exception\NotFoundException;

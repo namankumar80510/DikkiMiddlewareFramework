@@ -9,10 +9,11 @@
     },
     "autoload": {
         "psr-4": {
+            "Core\\": "modules/core/",
+            "Commands\\": "commands/",
             "Api\\": "modules/api/",
-            "App\\": "modules/app/",
-            "Auth\\": "modules/auth/",
-            "Commands\\": "commands/"
+            "Home\\": "modules/home/",
+            "Auth\\": "modules/auth/"
         },
         "files": [
             "modules/helpers.php"

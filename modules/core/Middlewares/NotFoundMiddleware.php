@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Middlewares;
+namespace Core\Middlewares;
 
-use App\Libraries\ApiResponse;
+use Core\Libraries\ApiResponse;
 use Laminas\Diactoros\Response\HtmlResponse;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;

@@ -2,8 +2,9 @@
 
 return [
     'autoload' => [
-        'app', // must be loaded first
+        'core', // must be loaded first
         'auth',
         'api',
+        'home',
     ]
 ];

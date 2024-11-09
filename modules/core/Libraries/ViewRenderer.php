@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Libraries;
+namespace Core\Libraries;
 
 use League\Plates\Engine;
 

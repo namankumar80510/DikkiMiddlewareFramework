@@ -7,7 +7,7 @@ return [
 
     // Global middlewares; loaded before every route
     'middlewares' => [
-        new \App\Middlewares\CorsMiddleware,
+        new \Core\Middlewares\CorsMiddleware,
         // new \Auth\Middlewares\AuthMiddleware() # remove it if you want whole site to be private
     ]
 ];
