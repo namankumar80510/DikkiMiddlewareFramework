@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found · Git</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f6f8fa;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .error-container {
+            max-width: 600px;
+            margin: 64px auto;
+            text-align: center;
+            padding: 32px;
+        }
+
+        .error-image {
+            max-width: 280px;
+            margin-bottom: 32px;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .error-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #24292f;
+        }
+
+        .search-box {
+            max-width: 360px;
+            margin: 24px auto;
+        }
+
+        .suggestions {
+            margin-top: 32px;
+            text-align: left;
+        }
+
+        .btn-primary {
+            background-color: #2da44e;
+            border-color: #2da44e;
+        }
+
+        .btn-primary:hover {
+            background-color: #2c974b;
+            border-color: #2c974b;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="error-container">
+            <!-- Placeholder image for the 404 illustration -->
+            <img src="https://picsum.naman.blog/image?width=280&height=160&quality=80" alt="404 Space Octopus"
+                class="error-image">
+
+            <h1 class="error-title">This is not the web page you are looking for.</h1>
+            <p class="text-muted mb-4">
+                Looks like this page doesn't exist. Double-check the URL or try searching for something else.
+            </p>
+
+            <!-- Search box -->
+            <div class="search-box">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Search repositories, code, and users...">
+                    <button class="btn btn-primary" type="button">Search</button>
+                </div>
+            </div>
+
+            <!-- Quick suggestions -->
+            <div class="suggestions">
+                <h6 class="text-dark mb-3">You might want to:</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a href="/" class="text-decoration-none">→ Return to the homepage</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="/trending" class="text-decoration-none">→ Check out trending repositories</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="/explore" class="text-decoration-none">→ Explore featured topics</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Support link -->
+            <div class="mt-5">
+                <p class="text-muted small">
+                    If you believe this is an error, please
+                    <a href="/support" class="text-decoration-none">contact support</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

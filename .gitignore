@@ -1,0 +1,16 @@
+.idea/
+.vscode/
+vendor/
+storage/tmp/logs/*
+!storage/tmp/logs/.gitkeep
+storage/tmp/cache/*
+!storage/tmp/cache/.gitkeep
+storage/database/*
+!storage/database/.gitkeep
+storage/repositories/*
+!storage/repositories/.gitkeep
+node_modules/
+config/api_keys.php
+composer.lock
+package-lock.json
+.env

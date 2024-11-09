@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Error · GitHub Clone</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f6f8fa;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .error-container {
+            max-width: 750px;
+            margin: 32px auto;
+            text-align: center;
+            padding: 32px;
+        }
+
+        .error-status {
+            font-size: 72px;
+            font-weight: 200;
+            color: #24292f;
+            margin-bottom: 8px;
+        }
+
+        .error-divider {
+            font-size: 24px;
+            color: #6e7781;
+            margin: 0 16px;
+        }
+
+        .error-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #24292f;
+        }
+
+        .error-message {
+            color: #57606a;
+            margin-bottom: 24px;
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #dc3545;
+            margin-right: 8px;
+            animation: pulse 2s infinite;
+        }
+
+        .technical-details {
+            background-color: #ffffff;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            padding: 16px;
+            margin: 24px 0;
+            text-align: left;
+        }
+
+        .retry-button {
+            background-color: #2da44e;
+            border-color: #2da44e;
+            margin-right: 8px;
+        }
+
+        .retry-button:hover {
+            background-color: #2c974b;
+            border-color: #2c974b;
+        }
+
+        .status-page-button {
+            background-color: #ffffff;
+            border-color: #d0d7de;
+            color: #24292f;
+        }
+
+        .status-page-button:hover {
+            background-color: #f6f8fa;
+            border-color: #d0d7de;
+            color: #24292f;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="error-container">
+            <!-- Error Status and Title -->
+            <div class="mb-4">
+                <h1 class="error-status">5xx</h1>
+                <div class="d-flex align-items-center justify-content-center mb-3">
+                    <span class="status-indicator"></span>
+                    <span class="error-title">Houston, we have a problem</span>
+                </div>
+                <p class="error-message">
+                    Our servers are experiencing some turbulence right now.
+                    We've been notified and are working to fix the issue.
+                </p>
+            </div>
+
+            <!-- Technical Details Box -->
+            <div class="technical-details">
+                <div class="mb-2">
+                    <strong>Technical Details:</strong>
+                </div>
+                <div class="text-muted small">
+                    <p class="mb-1">• Timestamp: <span id="timestamp">Loading...</span></p>
+                    <p class="mb-1">• Request ID: <span id="requestId">Loading...</span></p>
+                    <p class="mb-0">• Server: api-prod-worker-east1-c</p>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="mb-4">
+                <button class="btn btn-primary retry-button" onclick="window.location.reload()">
+                    Try Again
+                </button>
+                <a href="/status" class="btn status-page-button">
+                    Check System Status
+                </a>
+            </div>
+
+            <!-- Help Links -->
+            <div class="mt-4">
+                <p class="text-muted mb-2">Need help? Try these:</p>
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="/support" class="text-decoration-none">Contact Support</a>
+                    </li>
+                    <li class="list-inline-item error-divider">·</li>
+                    <li class="list-inline-item">
+                        <a href="/" class="text-decoration-none">Return Home</a>
+                    </li>
+                    <li class="list-inline-item error-divider">·</li>
+                    <li class="list-inline-item">
+                        <a href="/docs" class="text-decoration-none">Documentation</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Update timestamp and request ID -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Update timestamp
+            const now = new Date();
+            document.getElementById('timestamp').textContent = now.toISOString();
+
+            // Generate random request ID
+            const requestId = 'req_' + Math.random().toString(36).substring(2, 15);
+            document.getElementById('requestId').textContent = requestId;
+        });
+    </script>
+</body>
+
+</html>

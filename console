@@ -1,0 +1,32 @@
+#!/usr/bin/env php
+<?php
+
+/**
+ * A complete console application for working with framework.
+ */
+
+use Dikki\DotEnv\DotEnv;
+use Symfony\Component\Console\Application;
+
+// require paths constants
+require_once __DIR__ . '/paths_constants.php';
+
+// require vendor autoload
+require_once VENDOR_PATH . 'autoload.php';
+
+// load environment variables
+(new DotEnv(__DIR__))->load();
+
+// create application instance
+$app = new Application(config('app.name'), config('app.version'));
+
+// commands directory
+$commandsDir = __DIR__ . '/commands';
+$commandFiles = glob($commandsDir . '/*.php');
+foreach ($commandFiles as $commandFile) {
+    $commandClass = 'Commands\\' . basename($commandFile, '.php');
+    $app->add(new $commandClass());
+}
+
+// run application
+$app->run();

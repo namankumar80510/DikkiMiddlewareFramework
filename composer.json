@@ -1,0 +1,37 @@
+{
+    "name": "dikki/middleware",
+    "description": "A simple middleware framework for php inspired from Mezzio",
+    "type": "project",
+    "license": "MIT",
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Api\\": "modules/api/",
+            "App\\": "modules/app/",
+            "Auth\\": "modules/auth/",
+            "Commands\\": "commands/"
+        },
+        "files": [
+            "modules/helpers.php"
+        ]
+    },
+    "require": {
+        "aura/session": "^4.0",
+        "dibi/dibi": "^5.0",
+        "dikki/config": "^2.0",
+        "dikki/dotenv": "^1.0",
+        "guzzlehttp/guzzle": "^7.9",
+        "laminas/laminas-diactoros": "^3.5",
+        "laminas/laminas-httphandlerrunner": "^2.11",
+        "league/plates": "^3.6",
+        "league/route": "^5.1",
+        "nette/caching": "^3.3",
+        "nette/utils": "^4.0",
+        "symfony/console": "^7.1",
+        "symfony/dependency-injection": "^7.1",
+        "tracy/tracy": "^2.10"
+    }
+}

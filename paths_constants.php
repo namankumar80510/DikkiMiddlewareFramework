@@ -1,0 +1,18 @@
+<?php
+
+// Define base paths
+define('PUBLIC_PATH', __DIR__ . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR);
+define('ROOT_PATH', dirname(PUBLIC_PATH) . DIRECTORY_SEPARATOR);
+
+// Application paths
+define('MODULES_PATH', ROOT_PATH . 'modules' . DIRECTORY_SEPARATOR);
+define('CONFIG_PATH', ROOT_PATH . 'config' . DIRECTORY_SEPARATOR);
+define('VENDOR_PATH', ROOT_PATH . 'vendor' . DIRECTORY_SEPARATOR);
+define('RESOURCES_PATH', ROOT_PATH . 'resources' . DIRECTORY_SEPARATOR);
+
+// Storage paths
+define('STORAGE_PATH', ROOT_PATH . 'storage' . DIRECTORY_SEPARATOR);
+define('TMP_PATH', STORAGE_PATH . 'tmp' . DIRECTORY_SEPARATOR);
+define('LOGS_PATH', TMP_PATH . 'logs' . DIRECTORY_SEPARATOR);
+define('CACHE_PATH', TMP_PATH . 'cache' . DIRECTORY_SEPARATOR);
+define('DATABASE_PATH', STORAGE_PATH . 'database' . DIRECTORY_SEPARATOR);
