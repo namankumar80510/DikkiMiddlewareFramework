@@ -13,11 +13,11 @@ class RoutingStrategy extends ApplicationStrategy
 {
     public function getNotFoundDecorator(NotFoundException $exception): MiddlewareInterface
     {
-        return new \App\Middlewares\NotFoundMiddleware();
+        return new \Core\Middlewares\NotFoundMiddleware();
     }
 
     public function getMethodNotAllowedDecorator(MethodNotAllowedException $exception): MiddlewareInterface
     {
-        return new \App\Middlewares\MethodNotAllowedMiddleware();
+        return new \Core\Middlewares\MethodNotAllowedMiddleware();
     }
 }

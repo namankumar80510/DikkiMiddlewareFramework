@@ -7,6 +7,12 @@
         "sort-packages": true,
         "optimize-autoloader": true
     },
+    "authors": [
+        {
+            "name": "Naman Kumar",
+            "email": "naman@naman.blog"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "Core\\": "modules/Core/",
@@ -16,7 +22,7 @@
             "Auth\\": "modules/Auth/"
         },
         "files": [
-            "modules/helpers.php"
+            "modules/Helpers.php"
         ]
     },
     "require": {
